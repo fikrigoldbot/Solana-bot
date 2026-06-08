@@ -1,0 +1,28 @@
+"""
+Solana Meme Coin Bot — Configuration Template
+Copy this file to config.py and fill in your values.
+"""
+
+# ── Telegram ─────────────────────────────────────────────
+TELEGRAM_TOKEN   = "YOUR_BOT_TOKEN"      # from @BotFather
+TELEGRAM_CHAT_ID = "YOUR_CHAT_ID"        # from @userinfobot
+
+# ── Solana Wallet ─────────────────────────────────────────
+WALLET_PRIVATE_KEY = "YOUR_BASE58_PRIVATE_KEY"
+RPC_URL = "https://api.mainnet-beta.solana.com"
+
+# ── Trading Parameters ────────────────────────────────────
+MAX_SOL_PER_TRADE    = 0.1   # Max SOL per buy order
+DAILY_LOSS_LIMIT_SOL = 0.5   # Stop trading if daily loss reaches this
+TAKE_PROFIT_PERCENT  = 50    # Auto-sell at +50% gain
+STOP_LOSS_PERCENT    = 20    # Auto-sell at -20% loss
+
+# ── Token Filters ─────────────────────────────────────────
+MIN_LIQUIDITY_USD     = 5000  # Minimum pool liquidity in USD
+MAX_TOKEN_AGE_MINUTES = 30    # Only buy tokens launched < 30 min ago
+MIN_PRICE_CHANGE_5M   = 5     # Minimum +5% momentum (5-min candle)
+
+# ── Monitoring ────────────────────────────────────────────
+SCAN_INTERVAL_SECONDS = 10
+DEXSCREENER_API = "https://api.dexscreener.com/latest/dex"
+JUPITER_API     = "https://quote-api.jup.ag/v6"
